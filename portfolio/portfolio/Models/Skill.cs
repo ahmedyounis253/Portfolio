@@ -10,6 +10,8 @@ namespace portfolio.Models
         public string title { get; set; }
         public string description { get; set; }
         public int rate { get; set; }
+        public Profile profile { get; set; }
+        public int profileId { get; set; }
 
     }
 }

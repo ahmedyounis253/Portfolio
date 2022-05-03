@@ -13,6 +13,8 @@ namespace portfolio.Models
         public ICollection<Skill> usedSkills { get; set; }
         public DateTime date { get; set; }
         public Uri vedioPath { get; set; }
+        public Profile profile { get; set; }
+        public int profileId { get; set; }
 
 
     }

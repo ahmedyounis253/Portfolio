@@ -12,6 +12,9 @@ namespace portfolio.Models
         public Uri link { get; set; }
         public string source { get; set; }
         public DateTime expiration { get; set; }
+        public Study study { get; set; }
+        public int studyId { get; set; }
+
 
     }
 }

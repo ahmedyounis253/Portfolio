@@ -13,6 +13,7 @@ namespace portfolio.Models
         public string field { get; set; }
         public DateTime enroll { get; set; }
         public DateTime graduation { get; set; }
-        
+        public Study study { get; set; }
+        public int studyId { get; set; }
     }
 }

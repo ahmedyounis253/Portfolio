@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore;
+using portfolio.Models;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace portfolio.Controllers
@@ -8,24 +9,31 @@ namespace portfolio.Controllers
     [ApiController]
     public class AdminController : ControllerBase
     {
+        public PortfolioDbContext context { get; set; }
+        AdminController(PortfolioDbContext _context)
+        {
+            context = _context;
+
+        }
         // GET: api/<AdminController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public async Task<IEnumerable<Admin>> Get()
         {
-            return new string[] { "value1", "value2" };
+            return await context.Admins.ToListAsync();
         }
 
         // GET api/<AdminController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<Admin> GetUser(string username)
         {
-            return "value";
+            return await context.Admins.FirstAsync(admin => admin.username == username);
         }
 
         // POST api/<AdminController>
         [HttpPost]
         public void Post([FromBody] string value)
         {
+            return;
         }
 
         // PUT api/<AdminController>/5
@@ -36,8 +44,13 @@ namespace portfolio.Controllers
 
         // DELETE api/<AdminController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public  void Delete(string username )
+
         {
+            var admin =  context.Admins.First(admin => admin.username == username);
+            context.Admins.Remove(admin);
+
         }
+
     }
 }

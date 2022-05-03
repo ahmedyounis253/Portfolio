@@ -10,10 +10,9 @@ namespace portfolio.Controllers
     {
         // GET: api/<CertificationController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public void  Get()
         {
-            return new string[] { "value1", "value2" };
-        }
+            return;        }
 
         // GET api/<CertificationController>/5
         [HttpGet("{id}")]
