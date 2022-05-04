@@ -9,7 +9,7 @@ namespace portfolio.Models
     {
         public int profileId { get; set; }
         public string  name { get; set; }
-        public string  preferedNmae { get; set; }
+        public string  preferedName { get; set; }
         public Uri imageUrl { get; set; }
         public Uri leetcode { get; set; }
         public Uri linkedin { get; set; }

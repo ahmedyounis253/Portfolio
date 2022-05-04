@@ -11,5 +11,6 @@ namespace portfolio.Models
         public ICollection<Faculty> faculties { get; set; }
         public int profileId { get; set; }
         public Profile profile { get; set; }
+
     }
 }

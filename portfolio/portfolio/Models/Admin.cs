@@ -15,7 +15,7 @@ namespace portfolio.Models
         public string verificationCode { get; set; }
         public DateTime birth { get; set; }
         public string phone { get; set; }
-
+        public bool isVerified { get; set; }
 
 
 
