@@ -4,7 +4,7 @@ using System.Text;
 using System.Collections.Generic;
 namespace portfolio.Models
 {
-    public class Faculty
+    public  class Faculty
     {
         public int facultyId { get; set; }
         public string title { set; get; }

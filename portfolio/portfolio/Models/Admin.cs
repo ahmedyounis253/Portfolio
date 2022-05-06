@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace portfolio.Models
 {
-    public class Admin
+    public  class Admin
     {
         [Key]
         public string username { get; set; }

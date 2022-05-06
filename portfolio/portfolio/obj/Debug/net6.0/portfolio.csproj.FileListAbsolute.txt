@@ -271,3 +271,6 @@ C:\Users\younis\Desktop\new\portfolio\portfolio\bin\Debug\net6.0\Swashbuckle.Asp
 C:\Users\younis\Desktop\new\portfolio\portfolio\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\younis\Desktop\new\portfolio\portfolio\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\younis\Desktop\new\portfolio\portfolio\obj\Debug\net6.0\portfolio.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\younis\Desktop\new\portfolio\portfolio\obj\Debug\net6.0\scopedcss\Pages\Index.razor.rz.scp.css
+C:\Users\younis\Desktop\new\portfolio\portfolio\obj\Debug\net6.0\scopedcss\Pages\Project.razor.rz.scp.css
+C:\Users\younis\Desktop\new\portfolio\portfolio\obj\Debug\net6.0\scopedcss\Pages\Projects.razor.rz.scp.css

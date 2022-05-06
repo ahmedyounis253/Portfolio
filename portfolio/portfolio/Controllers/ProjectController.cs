@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore;
+using portfolio.Models;
+using portfolio.Data;
+using portfolio.Dtos;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace portfolio.Controllers
@@ -8,36 +11,71 @@ namespace portfolio.Controllers
     [ApiController]
     public class ProjectController : ControllerBase
     {
-        // GET: api/<ProjectController>
-        [HttpGet]
-        public IEnumerable<string> Get()
+        public PortfolioDbContext context;
+        public ProjectController(PortfolioDbContext _context)
         {
-            return new string[] { "value1", "value2" };
+            context = _context;
+
+
+        }
+
+        // GET: api/<ProjectController>
+        [HttpGet("getall/{email}")]
+        public async Task<List<Project>> GetAsync(string email)
+        {
+            var profile= await context.Profiles.Include(projects=>projects.projects).FirstAsync(projects=>projects.email == email);
+            var projects = profile.projects;
+
+            return projects;
         }
 
         // GET api/<ProjectController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public async Task<Project> Get(int id)
         {
-            return "value";
+            var project = await context.Projects.FirstAsync(project=>project.projectId == id);
+
+            return project;
         }
 
         // POST api/<ProjectController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<string>  Post(string email,[FromBody] ProjectDto project)
         {
+            var profile= await context.Profiles.Include(projects=>projects.projects).FirstAsync(projects=>projects.email == email);
+            profile.projects.Add(project.AsModel());
+            await context.SaveChangesAsync();
+            return "project added successfully.";
+
+
         }
 
         // PUT api/<ProjectController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("update/{id}")]
+        public async Task<string> Put(int id, [FromBody] ProjectDto projectDto)
         {
+            var project = await context.Projects.FirstAsync(project => project.projectId == id);
+            project.title=projectDto.title;
+            project.description=projectDto.description;
+            project.github=projectDto.github;
+            project.usedSkills=projectDto.usedSkills;
+            project.vedioPath=projectDto.vedioPath;
+            project.date = projectDto.date;
+            await context.SaveChangesAsync();
+            return "Project updated successfully.";
+
+
         }
+
 
         // DELETE api/<ProjectController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public async Task<string> Delete(int id)
         {
+            var project = await context.Projects.FirstAsync(project => project.projectId == id);
+            context.Projects.Remove(project);
+            await context.SaveChangesAsync();
+            return "Project deleted successfully.";
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "/p144frVeuGtYuz7JMIAWb+F+AkXQYHVCpiNLdsxPVk=",
+  "Hash": "RRVOgSAhO39bSqhSKucLM9UodTznSyMXMgzYJFkIbxY=",
   "Source": "portfolio",
   "BasePath": "_content/portfolio",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\younis\\Desktop\\new\\portfolio\\portfolio\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\portfolio.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\younis\\Desktop\\new\\portfolio\\portfolio\\wwwroot\\css\\_Layout.css",
+      "SourceId": "portfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\younis\\Desktop\\new\\portfolio\\portfolio\\wwwroot\\",
+      "BasePath": "_content/portfolio",
+      "RelativePath": "css/_Layout.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\_Layout.css"
     },
     {
       "Identity": "C:\\Users\\younis\\Desktop\\new\\portfolio\\portfolio\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
@@ -270,6 +287,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\younis\\Desktop\\new\\portfolio\\portfolio\\wwwroot\\images\\unnamed.png",
+      "SourceId": "portfolio",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\younis\\Desktop\\new\\portfolio\\portfolio\\wwwroot\\",
+      "BasePath": "_content/portfolio",
+      "RelativePath": "images/unnamed.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\unnamed.png"
     }
   ]
 }

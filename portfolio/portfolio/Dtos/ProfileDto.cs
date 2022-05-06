@@ -9,6 +9,8 @@
         public Uri linkedin { get; set; }
         public Uri hackerRank { get; set; }
         public string description { get; set; }
+        public string email { get; set; }
+
 
 
     }

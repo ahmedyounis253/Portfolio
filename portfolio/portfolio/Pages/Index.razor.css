@@ -1,0 +1,39 @@
+﻿
+
+
+.background {
+    height: 100%;
+    margin: 0;
+    z-index:1;
+    top:-100px;
+    position:relative;
+    padding-bottom: 0px;
+    bottom: inherit;
+    background-color: darkslategrey;
+}
+.PortfolioImg {
+    z-index: 2;
+    top: 0;
+    height: 100%;
+    width:100%;
+    background-color: transparent;
+    position: absolute;
+    margin-right:0px;
+
+}
+.image{
+    width:auto;
+
+    
+}
+.overview {
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+    top: 0;
+    height:100%;
+       background:linear-gradient(to top right,black 60%,transparent 50%) ;
+    position: absolute;
+}
+
+

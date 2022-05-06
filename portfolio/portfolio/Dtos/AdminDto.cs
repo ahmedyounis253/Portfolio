@@ -9,6 +9,6 @@ namespace portfolio.Dtos
         public string verificationCode { get; set; }
         public DateTime birth { get; set; }
         public string phone { get; set; }
-        
+        public string email { get; set; }
     }
 }

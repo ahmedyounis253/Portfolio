@@ -2,13 +2,17 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.OpenApi.Models;
 using portfolio.Data;
+using portfolio.Dtos;
+using portfolio.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddMvc(setupAction: options => options.EnableEndpointRouting = false).SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Latest);
 builder.Services.AddServerSideBlazor();
 builder.Services.AddControllers();
+builder.Services.AddDbContext<PortfolioDbContext>();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Portfolio Api", Version = "v1", });
@@ -31,14 +35,16 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseMvcWithDefaultRoute();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
+app.UseDeveloperExceptionPage();
 app.UseSwagger();
-app.UseSwaggerUI(c =>
+app.UseSwaggerUI(options =>
 {
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
-    c.RoutePrefix="api";
 
+
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+    options.RoutePrefix = "api";
 });
 app.Run();

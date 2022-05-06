@@ -4,7 +4,7 @@ using System.Text;
 using System.Collections.Generic;
 namespace portfolio.Models
 {
-    public class Certification
+    public  class Certification
     {
         public int certificationId { get; set; }
         public string title { get; set; }

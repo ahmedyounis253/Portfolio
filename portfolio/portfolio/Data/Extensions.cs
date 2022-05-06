@@ -3,44 +3,50 @@ using portfolio.Models;
 
 namespace portfolio.Data
 {
-    public class Extentions
+
+    public static class Extensions
     {
 
+
+
         public static AdminDto AsDto(this Admin admin)
-        
-        
+
+
         {
-            return new AdminDto {
+            return new AdminDto
+            {
                 username = admin.username,
                 birth = admin.birth,
                 password = admin.password,
                 phone = admin.phone,
                 verificationCode = admin.verificationCode,
-                isVerified=admin.isVerified
-            }
-            
+                isVerified = admin.isVerified,
+                email=admin.email
+            };
+
         }
 
         ////////////////////////////////////////
-        
-        
-        
+
+
+
         public static ProfileDto AsDto(this Profile profile)
 
 
         {
             return new ProfileDto
             {
-                name =profile.name,
-                preferedName=profile.preferedName, 
+                name = profile.name,
+                preferedName = profile.preferedName,
                 imageUrl = profile.imageUrl,
-                leetcode =profile.leetcode,
-                linkedin=profile.linkedin,
-                hackerRank=profile.hackerRank,
-                description= profile.description,
-             }
+                leetcode = profile.leetcode,
+                linkedin = profile.linkedin,
+                hackerRank = profile.hackerRank,
+                description = profile.description,
+                email=profile.email,
+            };
 
-                
+
         }
         ////////////////////////////////////////    
         public static CertificationDto AsDto(this Certification certification)
@@ -49,17 +55,29 @@ namespace portfolio.Data
         {
             return new CertificationDto
             {
-                title=certification.title,
-                description=certification.description,
-                link=certification.link,
-                source=certification.source,
-                expiration=certification.expiration
+                title = certification.title,
+                description = certification.description,
+                link = certification.link,
+                source = certification.source,
+                expiration = certification.expiration
 
-            }
+            };
 
         }
         ////////////////////////////////////////    
+        public static List<CertificationDto> AsDto(this List<Certification> certifications)
 
+
+        {
+            List<CertificationDto> list = new List<CertificationDto>();
+            foreach (Certification certification in certifications)
+            {
+                list.Add(certification.AsDto());
+
+            };
+            return list;
+        }
+        ///////////////////////////////////////
         public static FacultyDto AsDto(this Faculty faculty)
 
 
@@ -73,11 +91,21 @@ namespace portfolio.Data
                 enroll = faculty.enroll
 
 
-            }
+            };
 
         }
         ////////////////////////////////////////    
+        public static List<FacultyDto> AsDto(this List<Faculty> faculties)
 
+
+        {    var list=new List<FacultyDto>();
+            foreach (Faculty faculty in faculties)
+            {
+                list.Add(faculty.AsDto());
+            }
+            return list;
+        }
+        ///////////////////////////////
 
         public static ProjectDto AsDto(this Project project)
 
@@ -90,11 +118,25 @@ namespace portfolio.Data
                 description = project.description,
                 usedSkills = project.usedSkills,
                 date = project.date,
-                vedioPath=project.vedioPath,
+                vedioPath = project.vedioPath,
 
 
 
+            };
+
+        }
+        ////////////////////////////////////////    
+
+        public static List<ProjectDto> AsDto(this List<Project> projects)
+
+
+        {
+            var list=new List<ProjectDto>();
+            foreach(var project in projects)
+            {
+                list.Add(project.AsDto());
             }
+            return list;
 
         }
         ////////////////////////////////////////    
@@ -111,7 +153,7 @@ namespace portfolio.Data
 
 
 
-            }
+            };
 
         }
         ////////////////////////////////////////    
@@ -121,10 +163,10 @@ namespace portfolio.Data
         {
             return new StudyDto
             {
-                faculties=study.faculties,
-                certifications=study.certification,
+                faculties = study.faculties,
+                certifications = study.certifications,
 
-            }
+            };
 
         }
         ////////////////////////////////////////    
@@ -142,8 +184,10 @@ namespace portfolio.Data
                 password = admin.password,
                 phone = admin.phone,
                 verificationCode = admin.verificationCode,
-                isVerified = admin.isVerified
-            }
+                isVerified = admin.isVerified,
+                email = admin.email
+
+            };
 
 
         }
@@ -165,7 +209,8 @@ namespace portfolio.Data
                 linkedin = profile.linkedin,
                 hackerRank = profile.hackerRank,
                 description = profile.description,
-            }
+                email=  profile.email,
+            };
 
 
 
@@ -183,7 +228,7 @@ namespace portfolio.Data
                 source = certification.source,
                 expiration = certification.expiration
 
-            }
+            };
 
         }
         ////////////////////////////////////////    
@@ -201,7 +246,7 @@ namespace portfolio.Data
                 enroll = faculty.enroll
 
 
-            }
+            };
 
         }
         ////////////////////////////////////////    
@@ -222,7 +267,7 @@ namespace portfolio.Data
 
 
 
-            }
+            };
 
         }
         ////////////////////////////////////////    
@@ -231,6 +276,8 @@ namespace portfolio.Data
 
 
         {
+
+
             return new Skill
             {
                 title = skill.title,
@@ -239,7 +286,7 @@ namespace portfolio.Data
 
 
 
-            }
+            };
 
         }
         ////////////////////////////////////////    
@@ -250,15 +297,16 @@ namespace portfolio.Data
             return new Study
             {
                 faculties = study.faculties,
-                certifications = study.certification,
+                certifications = study.certifications,
 
-            }
+            };
 
         }
         ////////////////////////////////////////   
 
-
+ 
 
 
     }
+
 }

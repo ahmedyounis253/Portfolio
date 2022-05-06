@@ -6,6 +6,10 @@ namespace portfolio.Models
 {
     public class PortfolioDbContext: DbContext
     {
+        public PortfolioDbContext(DbContextOptions options) : base(options)
+        {
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Data Source=YOUNIS;Integrated Security=True;");

@@ -4,8 +4,9 @@ namespace portfolio.Dtos
 {
     public class StudyDto
     {
-        public ICollection<Certification> certifications { get; set; }
-        public ICollection<Faculty> faculties { get; set; }
+        public List<Certification> certifications { get; set; }
+        public List<Faculty> faculties { get; set; }
+
 
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 using System.Collections.Generic;
 namespace portfolio.Models
 {
-    public class Skill
+    public  class Skill
     {
         public int skillId { get; set; }
         public string title { get; set; }
