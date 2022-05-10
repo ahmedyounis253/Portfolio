@@ -1,0 +1,40 @@
+
+.home[b-vj35qpn380] {
+    overflow-y: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.background[b-vj35qpn380] {
+    height: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    background-color: darkslategrey;
+    overflow-y: hidden;
+}
+
+.PortfolioImg[b-vj35qpn380] {
+    z-index: 2;
+    height: 100%;
+    top: -100%;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    margin-right: 0px;
+    overflow-y: hidden;
+}
+
+.image[b-vj35qpn380] {
+    width: auto;
+}
+
+.overview[b-vj35qpn380] {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+    top: -200%;
+    height: 100%;
+    background: linear-gradient(to top right,black 55%,transparent 50%);
+    position: relative;
+    overflow-y: hidden;
+}

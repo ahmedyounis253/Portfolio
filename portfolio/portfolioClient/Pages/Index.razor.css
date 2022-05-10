@@ -1,0 +1,40 @@
+﻿
+.home {
+    overflow-y: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.background {
+    height: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    background-color: darkslategrey;
+    overflow-y: hidden;
+}
+
+.PortfolioImg {
+    z-index: 2;
+    height: 100%;
+    top: -100%;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    margin-right: 0px;
+    overflow-y: hidden;
+}
+
+.image {
+    width: auto;
+}
+
+.overview {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+    top: -200%;
+    height: 100%;
+    background: linear-gradient(to top right,black 55%,transparent 50%);
+    position: relative;
+    overflow-y: hidden;
+}

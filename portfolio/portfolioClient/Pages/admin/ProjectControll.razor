@@ -1,0 +1,26 @@
+﻿@page "/add/project"
+@using portfolioClient.Repository;
+
+@inject NavigationManager Mav
+@if (string.IsNullOrEmpty(project.title))
+{
+    <h3>Add Project</h3>
+}
+else
+{
+    <h3>
+        Update Project
+    </h3>
+}
+
+<ProjectForm _project="@project"  url="@url">
+    
+
+
+</ProjectForm>
+@code {
+    public ProjectRepository project { get; set; } = new();
+    public Uri url = new Uri("https://localhost:7210/api/Project");
+
+
+}

@@ -1,0 +1,47 @@
+﻿@page "/projects"
+@using BlazorAnimate
+@using portfolioClient.Repository;
+
+<div class="projects pt-5 pb-2 " >
+<h3>Projects</h3>
+
+        @for (int x = 0;x<10;x++){
+            @if (x%2==0) {
+
+
+
+            <Animate Animation="Animations.ZoomOutRight" Duration=@TimeSpan.FromSeconds(0.5)>
+
+            <Project project="@project"></Project>
+
+
+            </Animate>
+        }
+
+        else
+        {
+            
+            <Animate Animation="Animations.ZoomOutLeft" Duration=@TimeSpan.FromSeconds(0.5)>
+
+            <Project project="@project"></Project>
+
+
+            </Animate>
+        }
+    }
+
+</div>
+
+
+
+@code {
+
+
+
+    public ProjectRepository project = new();
+
+
+
+
+
+}

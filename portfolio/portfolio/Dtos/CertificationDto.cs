@@ -2,6 +2,7 @@
 {
     public class CertificationDto
     {
+        public int certificationId { get; set; }
         public string title { get; set; }
         public string description { get; set; }
         public Uri link { get; set; }

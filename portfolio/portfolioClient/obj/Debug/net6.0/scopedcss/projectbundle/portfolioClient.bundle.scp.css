@@ -1,0 +1,216 @@
+/* /Pages/admin/AdminLayout.razor.rz.scp.css */
+.navbar-toggler[b-xiwgxqwll2] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-xiwgxqwll2] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-xiwgxqwll2] {
+    font-size: 1.1rem;
+}
+
+.oi[b-xiwgxqwll2] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-xiwgxqwll2] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-xiwgxqwll2] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-xiwgxqwll2] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-xiwgxqwll2]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+        .nav-item[b-xiwgxqwll2]  a.active {
+            background-color: rgba(255,255,255,0.25);
+            color: white;
+        }
+
+        .nav-item[b-xiwgxqwll2]  a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-xiwgxqwll2] {
+        display: none;
+    }
+
+    .collapse[b-xiwgxqwll2] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
+/* /Pages/admin/Login.razor.rz.scp.css */
+body[b-gspf0dr45j] {
+background-color:red;
+}
+/* /Pages/Index.razor.rz.scp.css */
+
+.home[b-vj35qpn380] {
+    overflow-y: hidden;
+    height: 100%;
+    position: relative;
+}
+
+.background[b-vj35qpn380] {
+    height: 100%;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    background-color: darkslategrey;
+    overflow-y: hidden;
+}
+
+.PortfolioImg[b-vj35qpn380] {
+    z-index: 2;
+    height: 100%;
+    top: -100%;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    margin-right: 0px;
+    overflow-y: hidden;
+}
+
+.image[b-vj35qpn380] {
+    width: auto;
+}
+
+.overview[b-vj35qpn380] {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+    top: -200%;
+    height: 100%;
+    background: linear-gradient(to top right,black 55%,transparent 50%);
+    position: relative;
+    overflow-y: hidden;
+}
+/* /Pages/Project.razor.rz.scp.css */
+.project[b-5sr7drx3qm]{
+
+
+    background-color:darkslategray;
+    border-radius:5px;
+    width:90%;
+
+
+}
+
+
+
+/* /Pages/Projects.razor.rz.scp.css */
+.projects[b-69k3stjjs5] {
+    width: 100%;
+    max-width: 100%;
+    background-color: black;
+    padding-left: 10%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+}
+/* /Shared/MainLayout.razor.rz.scp.css */
+.bg-body[b-jrnm6adtvk] {
+    height: 100%;
+    margin-top: 0;
+}
+
+.page[b-jrnm6adtvk] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-jrnm6adtvk] {
+    flex: 1;
+}
+
+.sidebar[b-jrnm6adtvk] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-jrnm6adtvk] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-jrnm6adtvk]  a, .top-row .btn-link[b-jrnm6adtvk] {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+    }
+
+    .top-row a:first-child[b-jrnm6adtvk] {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-jrnm6adtvk] {
+        display: none;
+    }
+
+    .top-row.auth[b-jrnm6adtvk] {
+        justify-content: space-between;
+    }
+
+    .top-row a[b-jrnm6adtvk], .top-row .btn-link[b-jrnm6adtvk] {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-jrnm6adtvk] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-jrnm6adtvk] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-jrnm6adtvk] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row[b-jrnm6adtvk], article[b-jrnm6adtvk] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* /Shared/NavMenu.razor.rz.scp.css */
+.navbar[b-qg6lvvkgw4] {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}

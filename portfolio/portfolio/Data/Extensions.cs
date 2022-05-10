@@ -15,6 +15,7 @@ namespace portfolio.Data
         {
             return new AdminDto
             {
+                
                 username = admin.username,
                 birth = admin.birth,
                 password = admin.password,
@@ -44,6 +45,7 @@ namespace portfolio.Data
                 hackerRank = profile.hackerRank,
                 description = profile.description,
                 email=profile.email,
+                profileId = profile.profileId,
             };
 
 
@@ -55,6 +57,7 @@ namespace portfolio.Data
         {
             return new CertificationDto
             {
+                certificationId= certification.certificationId,
                 title = certification.title,
                 description = certification.description,
                 link = certification.link,
@@ -84,6 +87,7 @@ namespace portfolio.Data
         {
             return new FacultyDto
             {
+                facultyId= faculty.facultyId,
                 title = faculty.title,
                 faculty = faculty.faculty,
                 university = faculty.university,
@@ -113,6 +117,7 @@ namespace portfolio.Data
         {
             return new ProjectDto
             {
+                projectId= project.projectId,
                 title = project.title,
                 github = project.github,
                 description = project.description,
@@ -147,6 +152,7 @@ namespace portfolio.Data
         {
             return new SkillDto
             {
+                skillId= skill.skillId,
                 title = skill.title,
                 description = skill.description,
                 rate = skill.rate,
@@ -163,8 +169,9 @@ namespace portfolio.Data
         {
             return new StudyDto
             {
-                faculties = study.faculties,
-                certifications = study.certifications,
+                
+                faculties = study.faculties.AsDto(),
+                certifications = study.certifications.AsDto(),
 
             };
 

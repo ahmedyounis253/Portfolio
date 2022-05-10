@@ -1,0 +1,56 @@
+﻿@page "/"
+@using BlazorAnimate
+
+@using System.Threading
+
+
+<div class="background">
+
+    <h1 style="color:red">gray layer </h1> 
+
+</div>
+
+<div class="PortfolioImg ">
+<Animate Animation="Animations.ZoomInLeft" Duration=@TimeSpan.FromSeconds(0.5) Delay=@TimeSpan.FromMilliseconds(1000) >
+    <div style=" padding-left:@imageleft%; width:10%;height:20%; margin-top:3.5%;">
+
+    <img src="images/unnamed.png" class="image"  width = "300" height = "400" style=" object-fit:fill;"/>
+    </div>
+
+</Animate>
+
+</div>
+
+
+
+
+
+<div class=' overview'>
+
+    <div style="margin-top:20%;">
+    <Animate Animation="Animations.FadeRight" Duration=@TimeSpan.FromSeconds(0.5) Delay=@TimeSpan.FromMilliseconds(1000) >
+
+    <h1 style="color:red " >black layer</h1> 
+</Animate>
+</div>
+</div>
+
+@code{
+
+    public double imageleft=70 ;
+    private Animate animateImg = new();
+    public void Img()
+    {
+        animateImg.Run();
+    }
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Img();
+
+    }
+
+   
+
+}

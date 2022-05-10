@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using portfolio.Models;
 using portfolio.Data;
 using portfolio.Dtos;
+using portfolio.pagging;
+using Newtonsoft.Json;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace portfolio.Controllers
@@ -21,12 +23,13 @@ namespace portfolio.Controllers
 
         // GET: api/<ProjectController>
         [HttpGet("getall/{email}")]
-        public async Task<List<Project>> GetAsync(string email)
+        public async Task<List<Project>> GetAsync(string email,[FromQuery] ObjectPaging parameters)
         {
             var profile= await context.Profiles.Include(projects=>projects.projects).FirstAsync(projects=>projects.email == email);
             var projects = profile.projects;
-
-            return projects;
+            var pagedprojects= PagedList<Project>.ToPaging(projects, parameters.pageNumber, parameters.pageSize);
+            Response.Headers.Add("Pagging", JsonConvert.SerializeObject(pagedprojects.metaData));
+            return pagedprojects.ToList();
         }
 
         // GET api/<ProjectController>/5

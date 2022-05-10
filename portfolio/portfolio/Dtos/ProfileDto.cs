@@ -2,6 +2,7 @@
 {
     public class ProfileDto
     {
+        public int profileId { get; set; }
         public string name { get; set; }
         public string preferedName { get; set; }
         public Uri imageUrl { get; set; }

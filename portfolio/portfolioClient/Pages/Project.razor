@@ -1,0 +1,33 @@
+﻿@using portfolioClient.Repository;
+
+<div class="project  card border-2 border-dark ">
+      <div class="row ">
+
+    <div class="col-2 ">
+    <img  class="card-img" src="/images/unnamed.png" alt="no video" width=300 height=200/>
+
+    </div>
+    <div class="col-5  ">
+    <a>
+    <h1 class="card-title card-link"> title:@project.title </h1>
+
+    </a>    
+    <h2 class=" card-text"></h2>
+    <p class="card-text">date:@project.date </p>
+
+    </div>
+    <div class="col-3">
+            <p class="card-text">description:@project.description </p>
+    </div>
+    </div>
+
+
+</div>
+
+
+@code {
+    [Parameter]
+    
+    public ProjectRepository project { get; set; }
+    
+}

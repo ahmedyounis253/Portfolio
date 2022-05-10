@@ -19,8 +19,52 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/Component.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50LnJhem9y
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/CertificationControll.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cQ2VydGlmaWNhdGlvbkNvbnRyb2xsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/LoginForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cTG9naW5Gb3JtLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/ProfileControll.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cUHJvZmlsZUNvbnRyb2xsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/ProfileDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cUHJvZmlsZURldGFpbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/ProfileForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cUHJvZmlsZUZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/Profiles.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cUHJvZmlsZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/ProjectControll.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cUHJvamVjdENvbnRyb2xsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/ProjectForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cUHJvamVjdEZvcm0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/SkillControll.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cU2tpbGxDb250cm9sbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/StudyControll.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cU3R1ZHlDb250cm9sbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/MoreInfo.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTW9yZUluZm8ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/ProjectDetail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdERldGFpbC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/younis/Desktop/new/portfolio/portfolio/Shared/SurveyPrompt.razor]
@@ -30,6 +74,14 @@ build_metadata.AdditionalFiles.CssScope =
 [C:/Users/younis/Desktop/new/portfolio/portfolio/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/AdminLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cQWRtaW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-kh6j846x6l
+
+[C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/admin/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcYWRtaW5cTG9naW4ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-h73tnv2ubu
 
 [C:/Users/younis/Desktop/new/portfolio/portfolio/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=

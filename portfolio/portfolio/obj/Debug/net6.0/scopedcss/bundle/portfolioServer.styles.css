@@ -1,0 +1,127 @@
+/* _content/portfolioServer/Pages/Index.razor.rz.scp.css */
+
+.home[b-t8ds9oklp0]{
+    overflow-y:hidden;
+    height:100%;
+    position:relative;
+}
+
+.background[b-t8ds9oklp0] {
+    height: 100%;
+    margin: 0;
+    position:relative;
+    z-index: 1;
+    background-color: darkslategrey;
+    overflow-y:hidden;
+}
+.PortfolioImg[b-t8ds9oklp0] {
+    z-index: 2;
+    height: 100%;
+    top:-100%;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    margin-right: 0px;
+    overflow-y: hidden;
+}
+.image[b-t8ds9oklp0]{
+    width:auto;
+
+    
+}
+.overview[b-t8ds9oklp0] {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 3;
+    top: -200%;
+    height:100%;
+    background:linear-gradient(to top right,black 55%,transparent 50%) ;
+    position: relative;
+    overflow-y:hidden;
+    
+}
+
+
+/* _content/portfolioServer/Shared/MainLayout.razor.rz.scp.css */
+.bg-body[b-y5pde0k6jk]{
+    height:100%;
+    margin-top:0;
+}
+.page[b-y5pde0k6jk] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+main[b-y5pde0k6jk] {
+    flex: 1;
+}
+
+.sidebar[b-y5pde0k6jk] {
+    background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
+}
+
+.top-row[b-y5pde0k6jk] {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #d6d5d5;
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+    .top-row[b-y5pde0k6jk]  a, .top-row .btn-link[b-y5pde0k6jk] {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+    }
+
+    .top-row a:first-child[b-y5pde0k6jk] {
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row:not(.auth)[b-y5pde0k6jk] {
+        display: none;
+    }
+
+    .top-row.auth[b-y5pde0k6jk] {
+        justify-content: space-between;
+    }
+
+    .top-row a[b-y5pde0k6jk], .top-row .btn-link[b-y5pde0k6jk] {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-y5pde0k6jk] {
+        flex-direction: row;
+    }
+
+    .sidebar[b-y5pde0k6jk] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+
+    .top-row[b-y5pde0k6jk] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .top-row[b-y5pde0k6jk], article[b-y5pde0k6jk] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+/* _content/portfolioServer/Shared/NavMenu.razor.rz.scp.css */
+.navbar[b-u603n3jyus] {
+    position: sticky;
+    top: 0;
+    overflow:hidden;
+    width: 100%;
+    height:auto;
+    
+}

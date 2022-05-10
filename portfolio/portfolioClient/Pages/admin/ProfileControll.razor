@@ -1,0 +1,25 @@
+﻿@page "/add/profile"
+@using portfolioClient.Repository;
+@inject NavigationManager Mav
+@if (string.IsNullOrEmpty(profile.name))
+{
+    <h3>Add Profile</h3>
+}
+else
+{
+    <h3>
+        Update Profile
+    </h3>
+}
+
+<ProfileForm _profile="@profile"  url="@url">
+    
+
+
+</ProfileForm>
+@code {
+    public ProfileRepository profile { get; set; } = new();
+    public Uri url = new Uri("https://localhost:7210/api/Project");
+
+
+}

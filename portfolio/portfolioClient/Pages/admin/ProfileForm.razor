@@ -1,0 +1,81 @@
+﻿@using portfolioClient.Repository;
+@inject HttpClient _client
+
+
+
+
+<div>
+    <EditForm Model='@_profile' OnValidSubmit="Submit"  class="card card-body bg-light mt-5 container-fluid">
+        <DataAnnotationsValidator/>
+        <div class="row ">
+            <div class="col-2 col-form-label">
+                <label class="form-label" for="name">
+                    title
+                </label>
+            </div>
+            <div class="col-10 ">
+                <InputText  @bind-Value="_profile.name" class="form-control"/>
+            </div>
+        </div>
+        <div class="row mb-2">
+            <div class="col-2 col-form-label">
+                <label class="form-label" for="description">
+                    description
+                </label>
+            </div>
+            <div class="col-10 ">
+                <InputTextArea  @bind-Value="_profile.description" class="form-control"/>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-2 col-form-label">
+                <label class="form-label" for="hackerrank">
+                    hackerRank
+                </label>
+            </div>
+            <div class="col-10 ">
+                <input type='url' value="@_profile.hackerRank" class="form-control"/>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-2 col-form-label">
+                <label class="form-label" for="github">
+                    LeetCode
+                </label>
+            </div>
+            <div class="col-10 col-form-label">
+                <input type="url" Value="@_profile.leetcode" class="form-control"/>
+            </div>
+        </div>
+                <div class="row ">
+            <div class="col-2 col-form-label">
+                <label class="form-label" for="linkedin">
+                    LinkedIn
+                </label>
+            </div>
+            <div class="col-10 ">
+                <input type='url'  alue="@_profile.linkedin" class="form-control"/>
+            </div>
+        </div>
+                <div class="row  ">
+
+            <div class="align-content-end" >
+                <button value="submit" class="btn btn-primary " >submit</button>
+            </div>
+        </div>
+    </EditForm>
+</div>
+@code {
+    [Parameter]
+    public ProfileRepository _profile { get; set; }
+    [Parameter]
+    public Uri url { get; set; }
+
+    public void  Submit()
+    {
+    }
+
+    
+    
+
+}

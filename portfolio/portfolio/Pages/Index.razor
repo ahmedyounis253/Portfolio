@@ -1,36 +1,10 @@
 ﻿@page "/"
+@using BlazorAnimate
 @using portfolio.Dtos
 @using portfolio.Data
 @using portfolio.services
 @using System.Threading
-<div class="background">
 
-    <h1 style="color:red">gray layer </h1> 
-
+<div>
+    server side 
 </div>
-<div class="PortfolioImg ">
-    <img src="images/unnamed.png" class="image" style="padding-left:@imageleft%"/>
-
-</div>
-
-
-
-
-<div class='container-fluid overview'>
-    <h1 style="color:red">black layer</h1> 
-</div>
-@code{
-
-    public double imageleft=60 ;
-    public Admin admin = new();
-
-
-    protected override void OnInitialized()
-    {
-        base.OnInitialized();
-
-    }
-
-   
-
-}

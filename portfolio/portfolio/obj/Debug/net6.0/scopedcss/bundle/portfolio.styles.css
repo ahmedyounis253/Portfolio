@@ -1,26 +1,95 @@
+/* _content/portfolio/Pages/admin/AdminLayout.razor.rz.scp.css */
+.navbar-toggler[b-kh6j846x6l] {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.top-row[b-kh6j846x6l] {
+    height: 3.5rem;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.navbar-brand[b-kh6j846x6l] {
+    font-size: 1.1rem;
+}
+
+.oi[b-kh6j846x6l] {
+    width: 2rem;
+    font-size: 1.1rem;
+    vertical-align: text-top;
+    top: -2px;
+}
+
+.nav-item[b-kh6j846x6l] {
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+}
+
+    .nav-item:first-of-type[b-kh6j846x6l] {
+        padding-top: 1rem;
+    }
+
+    .nav-item:last-of-type[b-kh6j846x6l] {
+        padding-bottom: 1rem;
+    }
+
+    .nav-item[b-kh6j846x6l]  a {
+        color: #d7d7d7;
+        border-radius: 4px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        line-height: 3rem;
+    }
+
+        .nav-item[b-kh6j846x6l]  a.active {
+            background-color: rgba(255,255,255,0.25);
+            color: white;
+        }
+
+        .nav-item[b-kh6j846x6l]  a:hover {
+            background-color: rgba(255,255,255,0.1);
+            color: white;
+        }
+
+@media (min-width: 641px) {
+    .navbar-toggler[b-kh6j846x6l] {
+        display: none;
+    }
+
+    .collapse[b-kh6j846x6l] {
+        /* Never collapse the sidebar for wide screens */
+        display: block;
+    }
+}
+/* _content/portfolio/Pages/admin/Login.razor.rz.scp.css */
+body[b-h73tnv2ubu] {
+background-color:red;
+}
 /* _content/portfolio/Pages/Index.razor.rz.scp.css */
 
-
+.home[b-t8ds9oklp0]{
+    overflow-y:hidden;
+    height:100%;
+    position:relative;
+}
 
 .background[b-t8ds9oklp0] {
     height: 100%;
     margin: 0;
-    z-index:1;
-    top:-100px;
     position:relative;
-    padding-bottom: 0px;
-    bottom: inherit;
+    z-index: 1;
     background-color: darkslategrey;
+    overflow-y:hidden;
 }
 .PortfolioImg[b-t8ds9oklp0] {
     z-index: 2;
-    top: 0;
     height: 100%;
-    width:100%;
+    top:-100%;
+    width: 100%;
     background-color: transparent;
-    position: absolute;
-    margin-right:0px;
-
+    position: relative;
+    margin-right: 0px;
+    overflow-y: hidden;
 }
 .image[b-t8ds9oklp0]{
     width:auto;
@@ -28,13 +97,14 @@
     
 }
 .overview[b-t8ds9oklp0] {
-    background-color: black;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     z-index: 3;
-    top: 0;
+    top: -200%;
     height:100%;
-       background:linear-gradient(to top right,black 60%,transparent 50%) ;
-    position: absolute;
+    background:linear-gradient(to top right,black 55%,transparent 50%) ;
+    position: relative;
+    overflow-y:hidden;
+    
 }
 
 
@@ -52,12 +122,21 @@
 
 
 /* _content/portfolio/Pages/Projects.razor.rz.scp.css */
-.projects[b-yr7gehh92c]{
-    width:100%;
-    background-color:black;
-    padding-left:10%;   
+.projects[b-yr7gehh92c] {
+    width: 100%;
+    max-width: 100%;
+    background-color: black;
+    padding-left: 10%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
 }
 /* _content/portfolio/Shared/MainLayout.razor.rz.scp.css */
+.bg-body[b-y5pde0k6jk]{
+    height:100%;
+    margin-top:0;
+}
 .page[b-y5pde0k6jk] {
     position: relative;
     display: flex;
@@ -130,9 +209,10 @@ main[b-y5pde0k6jk] {
 }
 /* _content/portfolio/Shared/NavMenu.razor.rz.scp.css */
 .navbar[b-u603n3jyus] {
-    position: fixed;
+    position: sticky;
     top: 0;
+    overflow:hidden;
     width: 100%;
-    z-index:4;
     height:auto;
+    
 }
