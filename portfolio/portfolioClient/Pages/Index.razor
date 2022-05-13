@@ -2,19 +2,19 @@
 @using BlazorAnimate
 
 @using System.Threading
-
-
+@using portfolioClient.Repository
+@inject HttpClient Http
+<div class="home">
 <div class="background">
 
-    <h1 style="color:red">gray layer </h1> 
 
 </div>
 
 <div class="PortfolioImg ">
-<Animate Animation="Animations.ZoomInLeft" Duration=@TimeSpan.FromSeconds(0.5) Delay=@TimeSpan.FromMilliseconds(1000) >
-    <div style=" padding-left:@imageleft%; width:10%;height:20%; margin-top:3.5%;">
+<Animate Animation="Animations.FadeLeft" Duration=@TimeSpan.FromSeconds(0.5) Delay=@TimeSpan.FromMilliseconds(1000) >
+    <div >
 
-    <img src="images/unnamed.png" class="image"  width = "300" height = "400" style=" object-fit:fill;"/>
+    <img src="@profile.imageUrl" class="image"  width = "300" height = "400" style=" object-fit:fill;"/>
     </div>
 
 </Animate>
@@ -27,27 +27,29 @@
 
 <div class=' overview'>
 
-    <div style="margin-top:20%;">
+    <div style="margin-top:10%; ">
     <Animate Animation="Animations.FadeRight" Duration=@TimeSpan.FromSeconds(0.5) Delay=@TimeSpan.FromMilliseconds(1000) >
 
-    <h1 style="color:red " >black layer</h1> 
+    <h1 style="color:white " class='ml-lg-5' >I'm <span class="name">@profile.name</span></h1> 
+    <p class="ml-lg-5 description">@profile.description</p> 
 </Animate>
 </div>
 </div>
-
+</div>
 @code{
 
-    public double imageleft=70 ;
     private Animate animateImg = new();
+    public ProfileRepository profile = new();
+    public string email = @"Ahmed.M.Younis20@gmail.com";
     public void Img()
     {
         animateImg.Run();
     }
 
-    protected override void OnInitialized()
+    protected override async Task  OnInitializedAsync()
     {
-        base.OnInitialized();
-        Img();
+        profile = await Http.GetFromJsonAsync<ProfileRepository>("https://localhost:7210/api/Profile/"+email);
+        Console.WriteLine(profile);
 
     }
 

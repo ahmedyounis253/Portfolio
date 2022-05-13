@@ -10,11 +10,21 @@
         <div class="row ">
             <div class="col-2 col-form-label">
                 <label class="form-label" for="name">
-                    title
+                    name
                 </label>
             </div>
             <div class="col-10 ">
                 <InputText  @bind-Value="_profile.name" class="form-control"/>
+            </div>
+        </div>
+        <div class="row ">
+              <div class="col-2 col-form-label">
+                <label class="form-label" for="preferedName">
+                    prefered Name
+                </label>
+            </div>
+            <div class="col-10 ">
+                <InputText  @bind-Value="_profile.preferedName" class="form-control"/>
             </div>
         </div>
         <div class="row mb-2">
@@ -34,7 +44,7 @@
                 </label>
             </div>
             <div class="col-10 ">
-                <input type='url' value="@_profile.hackerRank" class="form-control"/>
+                <InputText @bind-Value="@_profile.hackerRank" class="form-control"/>
             </div>
         </div>
         <div class="row ">
@@ -44,7 +54,7 @@
                 </label>
             </div>
             <div class="col-10 col-form-label">
-                <input type="url" Value="@_profile.leetcode" class="form-control"/>
+                <InputText @bind-Value="@_profile.leetcode" class="form-control"/>
             </div>
         </div>
                 <div class="row ">
@@ -54,7 +64,28 @@
                 </label>
             </div>
             <div class="col-10 ">
-                <input type='url'  alue="@_profile.linkedin" class="form-control"/>
+                <InputText @bind-Value="@_profile.linkedin" class="form-control"/>
+            </div>
+        </div>               
+        <div class="row ">
+            <div class="col-2 col-form-label">
+                <label class="form-label" for="imageUrl">
+                    image url
+                </label>
+            </div>
+            <div class="col-10 ">
+                <InputText @bind-Value="@_profile.imageUrl" class="form-control"/>
+            </div>
+        </div>
+                      
+        <div class="row ">
+            <div class="col-2 col-form-label">
+                <label class="form-label" for="email">
+                    Email
+                </label>
+            </div>
+            <div class="col-10 ">
+                <InputText @bind-Value="@_profile.email" class="form-control"/>
             </div>
         </div>
                 <div class="row  ">
@@ -70,9 +101,32 @@
     public ProfileRepository _profile { get; set; }
     [Parameter]
     public Uri url { get; set; }
+    public string hackerRank { get; set; }
+    public string leetcode { get; set; }
+    public string linkedin { get; set; }
 
-    public void  Submit()
+    public string operation { get; set; }
+    protected override void OnAfterRender(bool firstRender)
     {
+        if (url.ToString() == "https://localhost:7210/api/Profile/") _profile = new ProfileRepository();
+        if (string.IsNullOrEmpty(_profile.email)) operation = "adding";
+        else operation = "update";
+
+
+    }
+
+    public async Task  Submit()
+    {
+        if (operation == "adding")
+        {
+            await _client.PostAsJsonAsync<ProfileRepository>(url,_profile);
+
+        }
+        else
+        {
+            await _client.PutAsJsonAsync<ProfileRepository>(url,_profile);
+        }
+        Console.WriteLine("yonis");
     }
 
     

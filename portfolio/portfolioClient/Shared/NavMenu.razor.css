@@ -1,5 +1,7 @@
 .navbar {
     position: sticky;
+    z-index:100;
+
     top: 0;
     overflow: hidden;
     width: 100%;

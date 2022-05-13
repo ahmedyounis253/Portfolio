@@ -1,0 +1,75 @@
+﻿
+<div class=" sidebar border-1 border-danger rounded-2 ">
+
+
+             <NavLink  href="/admindashboard" Match="NavLinkMatch.All" @onclick="ToggleNavMenu">
+                <span class="oi oi-moon" aria-hidden="true"></span> admin
+            </NavLink>
+            <NavLink  href="/admindashboard/profile"  Match="NavLinkMatch.Prefix" @onclick="ToggleNavMenu">
+                <span class="oi oi-moon" aria-hidden="true"></span> Profile
+            </NavLink>
+
+
+        <div style="display:@profileMenuClass">
+                        <div class="sidebar-tap">
+
+            <NavLink  href="/admindashboard/add/profile">
+                <span class="oi oi-project" aria-hidden="true"></span> Add Profile
+            </NavLink>
+        </div>             <div class="sidebar-tap ">
+
+            <NavLink  href="/admindashboard/remove/profile">
+                <span class="oi oi-project" aria-hidden="true"></span> Remove Profile
+            </NavLink>
+        </div>             <div class="sidebar-tap ">
+
+            <NavLink  href="/admindashboard/profile/Ahmed.M.Younis20@gmail.com/update">
+                <span class="oi oi-project" aria-hidden="true"></span> Update Profile
+            </NavLink>
+        </div> 
+  
+            </div>
+            <div >
+
+            <NavLink  href="/admindashboard/Projects" Match="NavLinkMatch.Prefix" @onclick="ProjectToggle">
+                <span class="oi oi-project" aria-hidden="true"></span> Projects
+            </NavLink>
+        </div> 
+          <div  style="display:@projectsMenuClass">
+                        <div >
+
+            <NavLink  href="/admindashboard/projects/add/project">
+                <span class="oi oi-project" aria-hidden="true"></span> Add Project
+            </NavLink>
+        </div>             <div >
+
+            <NavLink class="nav-link" href="/admindashboard/projects/remove/project">
+                <span class="oi oi-project" aria-hidden="true"></span> Remove Project
+            </NavLink>
+        </div>             <div>
+
+            <NavLink class="nav-link" href="/admindashboard/projects/update/project">
+                <span class="oi oi-project" aria-hidden="true"></span> Update Project
+            </NavLink>
+        </div> 
+  
+            </div>
+
+  </div>
+@code {
+    private bool ProfileMenu = false;
+    private bool ProjectMenu = false;
+
+    private string profileMenuClass => ProfileMenu ? "block" : "none";
+    private string projectsMenuClass => ProjectMenu? "block" : "none";
+    public string email = "Ahmed.M.Younis20@gmail.com";
+    private void ToggleNavMenu()
+    {
+        ProfileMenu = !ProfileMenu;
+    }    
+    private void ProjectToggle()
+    {
+        ProjectMenu = !ProjectMenu;
+    }   
+
+}

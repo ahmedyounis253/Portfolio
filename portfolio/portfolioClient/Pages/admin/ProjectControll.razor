@@ -1,4 +1,6 @@
-﻿@page "/add/project"
+﻿@layout AdminLayout
+
+@page "/admindashboard/projects/add/project"
 @using portfolioClient.Repository;
 
 @inject NavigationManager Mav
@@ -21,6 +23,7 @@ else
 @code {
     public ProjectRepository project { get; set; } = new();
     public Uri url = new Uri("https://localhost:7210/api/Project");
+
 
 
 }

@@ -3,6 +3,7 @@ namespace portfolioClient.Repository
 {
     public class FacultyRepository
     {
+        public int facultyId { get; set; }
         public string title { set; get; }
         public string faculty { get; set; }
         public string university { get; set; }

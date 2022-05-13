@@ -1,4 +1,7 @@
-﻿@page "/add/profile"
+﻿@page "/admindashboard/add/profile"
+@page "/admindashboard/profile/{email}/update"
+@layout AdminLayout
+@inject HttpClient client 
 @using portfolioClient.Repository;
 @inject NavigationManager Mav
 @if (string.IsNullOrEmpty(profile.name))
@@ -19,7 +22,22 @@ else
 </ProfileForm>
 @code {
     public ProfileRepository profile { get; set; } = new();
-    public Uri url = new Uri("https://localhost:7210/api/Project");
+    [Parameter]
+    public string email { get; set; }
+    public Uri url;
+    protected override async Task OnInitializedAsync()
+    {
+        if (Mav.Uri.Replace(Mav.BaseUri,"")=="admindashboard/add/profile") {
+            url = new Uri("https://localhost:7210/api/Profile/"); 
+
+        profile = new ProfileRepository(); }
+        else
+        {
+            url = new Uri($"https://localhost:7210/api/Profile/update/{email}");
+            profile = await client.GetFromJsonAsync<ProfileRepository>("https://localhost:7210/api/Profile/" + email);
+        }
+
+    }
 
 
 }

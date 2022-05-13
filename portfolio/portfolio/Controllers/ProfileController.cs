@@ -3,6 +3,7 @@ using portfolio.Dtos;
 using portfolio.Models;
 using portfolio.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Cors;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -44,48 +45,27 @@ namespace portfolio.Controllers
 
         }
 
-        // PUT api/<ProfileController>/5
-        [HttpPut("/update/linkedin/{email}")]
-        public async Task<string> Put(string email, [FromBody] Uri linkedin)
+  
+        
+        [HttpPut("update/{email}")]
+        public async Task<string> Put(string email, [FromBody] ProfileDto profile)
         {
-            var profile = context.Profiles.First(profile => profile.email == email);
-            profile.linkedin = linkedin;
-            await context.SaveChangesAsync();
-            return "Updated Successfully.";
-
-        }
-        [HttpPut("/update/hackerrank/{email}")]
-        public async Task<string> PutHackerRack(string email, [FromBody] Uri hackerrack)
-        {
-            var profile = context.Profiles.First(profile => profile.email == email);
-            profile.hackerRank = hackerrack;
-            await context.SaveChangesAsync();
-            return "Updated Successfully.";
-
-        }
-        [HttpPut("/update/leetcode/{email}")]
-        public async Task<string> PutLeetCode(string email, [FromBody] Uri leetCode)
-        {
-            var profile = context.Profiles.First(profile => profile.email == email);
-            profile.leetcode = leetCode;
-            await context.SaveChangesAsync();
-            return "Updated Successfully.";
-
-        }
-        [HttpPut("/update/email/{email}")]
-        public async Task<string> PutEmail(string email, [FromBody] string email2)
-        {
-            var profile = context.Profiles.First(profile => profile.email == email);
-            profile.email = email2;
-            await context.SaveChangesAsync();
-            return "Updated Successfully.";
-
-        }
-        [HttpPut("/update/description/{email}")]
-        public async Task<string> PutDescription(string email, [FromBody] string description)
-        {
-            var profile = context.Profiles.First(profile => profile.email == email);
-            profile.description = description;
+            var pro = context.Profiles.First(profile => profile.email == email);
+            pro.description = profile.description;
+            pro.leetcode = profile.leetcode;
+            pro.name = profile.name;
+            pro.preferedName = profile.preferedName;
+            pro.hackerRank=profile.hackerRank;
+            pro.linkedin = profile.linkedin;
+            pro.email= profile.email;
+            if (profile.imageUrl.ToString().Contains("http") || profile.imageUrl.ToString().Contains("https"))
+            {
+                pro.imageUrl=profile.imageUrl;
+            }
+            else
+            {
+                pro.imageUrl = new Uri("https://localhost:7210/" + profile.imageUrl.ToString());
+            }
             await context.SaveChangesAsync();
             return "Updated Successfully.";
 

@@ -2,8 +2,11 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding-bottom:0px;
 }
-
+#app{
+    padding:0px;
+}
 h1:focus {
     outline: none;
 }
@@ -62,3 +65,4 @@ a, .btn-link {
     .blazor-error-boundary::after {
         content: "An error has occurred."
     }
+

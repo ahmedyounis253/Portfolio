@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using portfolio.Data;
 using portfolio.Dtos;
@@ -11,6 +12,7 @@ namespace portfolio.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
+
     public class SkillController : ControllerBase
     {
 

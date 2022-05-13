@@ -1,13 +1,11 @@
-﻿html, body,#app {
-    height: 100%;
+﻿html, body {
     margin: 0;
     width: 100%;
     max-width: 100%;
-    background-color: "black";
+    background-color: black;
     margin-top: 0;
     scroll-behavior: smooth;
     scroll-margin: 5px;
     scrollbar-base-color: blue;
     scrollbar-3dlight-color: red;
 }
-\

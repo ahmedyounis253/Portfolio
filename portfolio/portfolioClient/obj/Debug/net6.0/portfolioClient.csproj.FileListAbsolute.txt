@@ -822,3 +822,4 @@ C:\Users\younis\Desktop\new\portfolio\portfolioClient\obj\Debug\net6.0\scopedcss
 C:\Users\younis\Desktop\new\portfolio\portfolioClient\obj\Debug\net6.0\scopedcss\Pages\Projects.razor.rz.scp.css
 C:\Users\younis\Desktop\new\portfolio\portfolioClient\obj\Debug\net6.0\scopedcss\Pages\admin\AdminLayout.razor.rz.scp.css
 C:\Users\younis\Desktop\new\portfolio\portfolioClient\obj\Debug\net6.0\scopedcss\Pages\admin\Login.razor.rz.scp.css
+C:\Users\younis\Desktop\new\portfolio\portfolioClient\obj\Debug\net6.0\scopedcss\Pages\admin\AdminSidebar.razor.rz.scp.css

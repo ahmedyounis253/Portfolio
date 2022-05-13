@@ -1,40 +1,69 @@
 ﻿
-.home {
-    overflow-y: hidden;
-    height: 100%;
-    position: relative;
+.home{
+    overflow-y:hidden;
 }
-
 .background {
-    height: 100%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     margin: 0;
-    position: relative;
+    position: absolute;
     z-index: 1;
     background-color: darkslategrey;
-    overflow-y: hidden;
 }
 
 .PortfolioImg {
     z-index: 2;
-    height: 100%;
-    top: -100%;
-    width: 100%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     background-color: transparent;
-    position: relative;
+    position: absolute;
     margin-right: 0px;
-    overflow-y: hidden;
+    overflow-y: unset;
+    overflow-x:hidden;
+
 }
 
 .image {
     width: auto;
+    height:700px;
+    padding-left:60%;
 }
 
 .overview {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     z-index: 3;
-    top: -200%;
-    height: 100%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     background: linear-gradient(to top right,black 55%,transparent 50%);
-    position: relative;
-    overflow-y: hidden;
+    position: absolute;
+    overflow-y: unset;
+}
+.name{
+    color:red;
+}
+.description{
+    padding-top:30px;
+    width:600px;
+    color:white;
+    font-size:30px;
+}
+@media screen and (max-width: 1000px){
+    .PortfolioImg {
+        position: sticky;
+        height: 400px;
+        max-height: 400px;
+        overflow-y: hidden;
+        padding-bottom: 0px;
+    }
+    .image{
+        height:400px;
+        max-height:400px;
+        padding-left:25%;
+        margin-top: 50px;
+        margin-bottom:0px;
+    }
+    .overview {
+        position: relative;
+        background-color: black;
+    }
 }

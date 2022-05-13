@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using portfolio.Dtos;
 using portfolio.Data;
 using portfolio.Models;
+using Microsoft.AspNetCore.Cors;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,7 +21,7 @@ namespace portfolio.Controllers
             context = _context;
         }
         // GET: api/<CertificationController>
-        [HttpGet("/getall/{email}")]
+        [HttpGet("getall/{email}")]
         public async Task<List<CertificationDto>>Get(string email)
         {
             Console.WriteLine(email);

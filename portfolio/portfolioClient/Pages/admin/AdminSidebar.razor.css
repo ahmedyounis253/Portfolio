@@ -1,19 +1,19 @@
 ﻿.sidebar {
     margin-left: 20px;
-    margin-top:3%;
+    margin-top: 3%;
     padding: 0;
-    padding-top:20px;
+    padding-top: 20px;
     width: 300px;
     background-color: transparent;
     position: fixed;
     height: 70%;
     overflow: auto;
-    border-width:200px;
-    border-style:groove;
-    border-color:blue;
+    border-width: 200px;
+    border-style: groove;
+    border-color: blue;
 }
 
- .sidebar ::deep a, .sidebar a {
+    .sidebar ::deep a, .sidebar a {
         display: block;
         color: black;
         padding: 16px;
@@ -22,42 +22,31 @@
         text-decoration: none;
     }
 
-    .sidebar ::deep  a.active, .sidebar a.active {
-        background-color: #04AA6D;
-        color: white;
-    }
+        .sidebar ::deep a.active, .sidebar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
 
-    .sidebar ::deep a:hover:not(.active) {
-        background-color: #555;
-        color: white;
-    }
+        .sidebar ::deep a:hover:not(.active) {
+            background-color: #555;
+            color: white;
+        }
 
-div.content {
-    margin-left: 325px;
-    margin-top: 20px;
-    padding: 1px 16px;
-    border-left-color: brown;
-    border-left-style: solid;
-    border-width: 20px;
-    margin-bottom: 20px;
-    border-radius:20px;
-}
 
 @media screen and (max-width: 700px) {
     .sidebar {
         width: 100%;
-        margin:0;
+        margin: 0;
         height: auto;
         position: relative;
     }
 
-        .sidebar ::deep a , .sidebar a {
+        .sidebar ::deep a, .sidebar a {
             float: left;
         }
 
     div.content {
         margin-left: 0;
-
     }
 }
 

@@ -1,40 +1,69 @@
 
-.home[b-vj35qpn380] {
-    overflow-y: hidden;
-    height: 100%;
-    position: relative;
+.home[b-vj35qpn380]{
+    overflow-y:hidden;
 }
-
 .background[b-vj35qpn380] {
-    height: 100%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     margin: 0;
-    position: relative;
+    position: absolute;
     z-index: 1;
     background-color: darkslategrey;
-    overflow-y: hidden;
 }
 
 .PortfolioImg[b-vj35qpn380] {
     z-index: 2;
-    height: 100%;
-    top: -100%;
-    width: 100%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     background-color: transparent;
-    position: relative;
+    position: absolute;
     margin-right: 0px;
-    overflow-y: hidden;
+    overflow-y: unset;
+    overflow-x:hidden;
+
 }
 
 .image[b-vj35qpn380] {
     width: auto;
+    height:700px;
+    padding-left:60%;
 }
 
 .overview[b-vj35qpn380] {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     z-index: 3;
-    top: -200%;
-    height: 100%;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
     background: linear-gradient(to top right,black 55%,transparent 50%);
-    position: relative;
-    overflow-y: hidden;
+    position: absolute;
+    overflow-y: unset;
+}
+.name[b-vj35qpn380]{
+    color:red;
+}
+.description[b-vj35qpn380]{
+    padding-top:30px;
+    width:600px;
+    color:white;
+    font-size:30px;
+}
+@media screen and (max-width: 1000px){
+    .PortfolioImg[b-vj35qpn380] {
+        position: sticky;
+        height: 400px;
+        max-height: 400px;
+        overflow-y: hidden;
+        padding-bottom: 0px;
+    }
+    .image[b-vj35qpn380]{
+        height:400px;
+        max-height:400px;
+        padding-left:25%;
+        margin-top: 50px;
+        margin-bottom:0px;
+    }
+    .overview[b-vj35qpn380] {
+        position: relative;
+        background-color: black;
+    }
 }

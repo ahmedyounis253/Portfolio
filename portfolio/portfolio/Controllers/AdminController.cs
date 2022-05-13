@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using portfolio.Models;
 using portfolio.Dtos;
 using portfolio.Data;
+using Microsoft.AspNetCore.Cors;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace portfolio.Controllers

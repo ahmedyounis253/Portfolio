@@ -297,19 +297,7 @@ namespace portfolio.Data
 
         }
         ////////////////////////////////////////    
-        public static Study AsModel(this StudyDto study)
 
-
-        {
-            return new Study
-            {
-                faculties = study.faculties,
-                certifications = study.certifications,
-
-            };
-
-        }
-        ////////////////////////////////////////   
 
  
 

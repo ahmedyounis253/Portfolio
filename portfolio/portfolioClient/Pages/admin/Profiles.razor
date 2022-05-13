@@ -1,5 +1,93 @@
-﻿<h3>Profiles</h3>
+﻿@layout AdminLayout
+@page "/admindashboard/profile"
+@using portfolioClient.Repository
+@inject HttpClient client
+@if (profile == null)
+{
+    <p>loading</p>
+}
+
+else
+{
+    <div>
+    <h1>
+    @profile.name
+    </h1>
+    <h3>
+        preferred Name: @profile.preferedName
+    </h3>
+    <p>
+        description : @profile.description
+    </p>
+    </div>
+    <div class=" align-content-end">
+        <img src="@profile.imageUrl" alt="NotFound"/>
+    </div>
+    <hr />
+    <h2>contacts and social</h2>
+    <div>
+       <p> Email: @profile.email</p>
+    <p>LinkedIn: @profile.linkedin</p>
+    <p>HackerRank: @profile.hackerRank</p>
+    <p>leetcode: @profile.leetcode</p>
+    <hr />
+    <h2>skills</h2>
+    @foreach(SkillRepository skill in skills)
+    {
+        <p>@skill.title</p>
+        <p>@skill.description</p>
+        <p>@skill.rate</p>
+    }
+
+    </div>
+    <hr/>
+    <div>
+        <h2>Study</h2>
+        <h3>Faculties</h3>
+    @foreach(FacultyRepository faculty in faculties)
+    {
+        <div class='card'>
+        <p>@faculty.university,@faculty.faculty,@faculty.field</p>
+        <p>@faculty.enroll - @faculty.graduation</p>
+        </div>
+
+    }
+    </div>
+    <div>
+            <h3>Certifications</h3>
+    @foreach(CertificationRepository certification in certifications)
+    {
+        <div class='card'>
+        <img src="@certification.link"/>
+        <p>@certification.title</p>
+        <p>@certification.description</p>
+
+        <p>From: @certification.source</p>
+        <p>Expiraition: @(certification.expiration==new DateTime() ? certification.expiration.ToShortDateString():"NoExpiration Date")</p>
+
+        </div>
+
+    }
+    </div>
+
+
+}
 
 @code {
+    [Parameter]
+    public ProfileRepository profile { get; set; }
+    public List<SkillRepository> skills { get; set; }
+    public List<CertificationRepository> certifications { get; set; }
+    public List<FacultyRepository> faculties { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        base.OnInitializedAsync();
+        profile = await client.GetFromJsonAsync<ProfileRepository>("https://localhost:7210/api/Profile/string");
+        skills = await client.GetFromJsonAsync<List<SkillRepository>>("https://localhost:7210/api/Skill/getall/string");
+        certifications = await client.GetFromJsonAsync<List<CertificationRepository>>("https://localhost:7210/api/Certification/getall/string");
+        faculties = await client.GetFromJsonAsync<List<FacultyRepository>>("https://localhost:7210/api/Faculty/getall/string");
+
+    }
+
 
 }

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "portfolioServer", "portfolio\portfolioServer.csproj", "{1989D61B-8812-4658-AF04-1D87BCBE1569}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "portfolioClient", "portfolioClient\portfolioClient.csproj", "{0F550CFD-334B-4DDB-A194-2483D8014B79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "portfolioClient", "portfolioClient\portfolioClient.csproj", "{0F550CFD-334B-4DDB-A194-2483D8014B79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
